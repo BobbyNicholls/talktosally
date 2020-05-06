@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon May  4 10:42:46 2020
-
-@author: Rob
+Very small "bot" that uses a tiny convolutional neural net to work out what you want to ask the falcon sally
+Made by tsameti, 2020-06-04
 """
 
 from keras.models import load_model
