@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Very small "bot" that uses a tiny convolutional neural net to work out what you want to ask the falcon sally.
+Very small "bot" that uses a tiny convolutional neural net to work out what you want to ask the falcon Sally.
 Made by tsameti, 2020-06-04
 """
 
