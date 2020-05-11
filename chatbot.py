@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Very small "bot" that uses a tiny convolutional neural net to work out what you want to ask the falcon sally
+Very small "bot" that uses a tiny convolutional neural net to work out what you want to ask the falcon sally.
 Made by tsameti, 2020-06-04
 """
 
@@ -19,7 +19,7 @@ while True:
     input_str = input("\nAsk Sally a question:\n")
     
     input_seq = tokenizer.texts_to_sequences([input_str])[0]
-    
+   
     if len(input_seq) > 10:
         input_seq =  vect[:10]
     else:
