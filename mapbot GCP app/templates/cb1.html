@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+        <title>My first bot</title>
+        
+    </head>
+    <body  style="text-align:center;">         <textarea readonly="true" id="botChat" style="text-align:left; position:fixed; display:block; top:3vh; border:1px solid black; width:92.5vw; margin-left:1%; margin-right:2.25%; height:75vh; resize:none; font-family:Courier; overflow-y:auto; user-select:none; font-size:3vw;"></textarea>        <p style="position:absolute; border:1px solid black; top:78vh; left:12.25vw; width:75vw;">     <input type="button" value="Hello" onclick="answer(document.getElementsByTagName('input')[0].value)"> <input type="button" value="What do you eat?" onclick="answer1(document.getElementsByTagName('input')[0].value)"> <input type="button" value="How fast can you fly?" onclick="answer2(document.getElementsByTagName('input')[0].value)"> </p>        <script>
+    
+var you = "Me";
+botSays("Hi, my name is Sally.\nTo chat, press one of the buttons below.\n")
+            // Recognized Speech Patterns for Question Responses
+var Hello = ["HI", "HEY", "HOWDY", "HEYA", "HOLA", "HELLO", "SUP", "KONNICHIWA", "ALOHA"]
+var Goodbye = ["BYE", "SEE YA", "CYA", "LATER", "ADIOS", "SAYONARA", "SEEYA"]
+var Greeting = ["WHAT'S UP", "HOW'S IT GOING", "HOW ARE YOU", "NICE DAY", "GOOD MORNING", "GOOD NIGHT"]
+var Name = [ "WHAT IS YOUR NAME", "WHAT'S YOUR NAME", "WHO ARE YOU", "WHAT DO THEY CALL YOU", "COMO TE LLAMAS"]
+var Actions = ["HELP", "DRINK", "CHALLENGE"]
+var Questions = ["QUESTION", "QUIZ", "CODE", "ANSWER", "HTML", "CSS", "JAVASCRIPT"];
+var HTMLTags1 = ["<P>", "<I>", "<SPAN>", "<DIV>", "<ARTICLE>", "<IFRAME>", "<A>", "<ABBR>","<ADDRESS>","<AUDIO>"];
+        // Skip the CMD Line and learn HTML by reading my code!~~ LMAO, here have fun.
+var HTMLTags2 = [
+"<A>", //    Defines a hyperlink
+"<ABBR>", //Defines an abbreviation or an acronym
+"<ACRONYM>", //    Not supported in HTML5. Use <abbr> instead. Defines an acronym
+"<ADDRESS>", //    Defines contact information for the author/owner of a document
+"<APPLET>", //    Not supported in HTML5. Use <embed> or <object> instead. Defines an embedded applet
+"<AREA>", //    Defines an area inside an image-map
+"<ARTICLE>", //    Defines an article
+"<ASIDE>", //    Defines content aside from the page content
+"<AUDIO>", //    Defines sound content
+"<B>" // Defines bold text
+]
+var HTMLTags3 = [
+"<BASE>", // Specifies the base URL/target for all relative URLs in a document
+"<BASEFONT>", //    Not supported in HTML5. Use CSS instead. Specifies a default color, size, and font for all text in a document
+"<BDI>",    // Isolates a part of text that might be formatted in a different direction from other text outside it
+"<BDO>",    //Overrides the current text direction
+"<BIG>",    //Not supported in HTML5. Use CSS instead. Defines big text
+"<BLOCKQUOTE>", //    Defines a section that is quoted from another source
+"<BODY>",    //Defines the document's body
+"<BR>",    //Defines a single line break
+"<BUTTON>",    //Defines a clickable button
+"<CANVAS>"    //Used to draw graphics, on the fly, via scripting (usually JavaScript)
+]
+var HTMLTags4 = [
+"<CAPTION>",    //Defines a table caption
+"<CENTER>", //    Not supported in HTML5. Use CSS instead. Defines centered text
+"<CITE>", //Defines the title of a work
+"<CODE>",    //Defines a piece of computer code
+"<COL>",    //Specifies column properties for each column within a <colgroup> element 
+"<COLGROUP>",    //Specifies a group of one or more columns in a table for formatting
+"<DATALIST>",    //Specifies a list of pre-defined options for input controls
+"<DD>",    //Defines a description/value of a term in a description list
+"<DEL>",    //Defines text that has been deleted from a document
+"<DETAILS>",    //Defines additional details that the user can view or hide
+"<DFN>" //    Represents the defining instance of a term
+]
+var colors = ["BLUE", "RED", "GREEN", "YELLOW", "WHITE", "BLACK", "SILVER", "GRAY" ];
+var Else = true;
+var questions = [colors, HTMLTags4, HTMLTags3, HTMLTags2, HTMLTags1, Hello, Goodbye, Greeting, Name, Actions, Questions];
+
+
+var reactions=[BotHello, BotGoodbye,BotGreeting];
+var BotHello = ["HI", "HEY", "HOWDY", "HEYA", "HOLA", "HELLO", "SUP", "KONNICHIWA", "ALOHA"]
+var BotGoodbye = ["BYE", "SEE YA", "CYA", "LATER", "ADIOS", "SAYONARA", "SEEYA"]
+var BotGreeting = ["WHAT'S UP", "HOW'S IT GOING", "HOW ARE YOU", "NICE TO SEE YOU", "GOOD MORNING", "WELCOME"]
+var BotPleasant = ["Thanks.", "Good job.", "Cool.", "I see.", "Anyway.", "right-o."]
+
+function answer(x) {
+    var botOut = botChat.value;
+    document.getElementsByTagName("textarea")[0] = botChat
+    //RESPONSES//
+
+                document.getElementsByTagName("input")[0].value = ""
+                if (true){
+                youSay(x); botChat.scrollTop = botChat.scrollHeight;
+                } 
+                question = x.toUpperCase()
+                for (i = 0; i < 10; i++) {
+            /*          EMPTY RESPONSE          */                    
+                if (true) {
+                    setTimeout( function() { botSays("\nSally : Hi, how are you?"); botChat.scrollTop = botChat.scrollHeight;}, 600);
+                return; } } } function botSays(x) {
+                document.getElementsByTagName("textarea")[0].innerHTML += x;
+            } function youSay(x) { botSays("\n"+ you + " \ : " + x)
+            }
+            function youDo(x) { botSays("\n"+ you + " " + x)                                            
+            } function enterButton(e, x) { if (e.keyCode == 13) { answer(x); }   } function answer1(x) {
+    var botOut = botChat.value;
+    document.getElementsByTagName("textarea")[0] = botChat
+    //RESPONSES//
+
+                document.getElementsByTagName("input")[0].value = ""
+                if (true){
+                youSay("What do you eat?"); botChat.scrollTop = botChat.scrollHeight;
+                } 
+                question = x.toUpperCase()
+                for (i = 0; i < 10; i++) {
+            /*          EMPTY RESPONSE          */                    
+                if (true) {
+                    setTimeout( function() { botSays("\nSally : Small animals, pidgeons and things."); botChat.scrollTop = botChat.scrollHeight;}, 600);
+                return; } } } function botSays(x) {
+                document.getElementsByTagName("textarea")[0].innerHTML += x;
+            }function answer2(x) {
+    var botOut = botChat.value;
+    document.getElementsByTagName("textarea")[0] = botChat
+    //RESPONSES//
+
+                document.getElementsByTagName("input")[0].value = ""
+                if (true){
+                youSay("How fast can you fly?"); botChat.scrollTop = botChat.scrollHeight;
+                } 
+                question = x.toUpperCase()
+                for (i = 0; i < 10; i++) {
+            /*          EMPTY RESPONSE          */                    
+                if (true) {
+                    setTimeout( function() { botSays("\nSally : Really bloody fast."); botChat.scrollTop = botChat.scrollHeight;}, 600);
+                return; } } } function botSays(x) {
+                document.getElementsByTagName("textarea")[0].innerHTML += x;
+            }
+
+                 </script></body></html>
