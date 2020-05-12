@@ -81,7 +81,7 @@ def root():
     times_indicators = iter(times_indicators)
 
     return render_template(
-        'cbmap1.html', times=times_indicators)
+        'cbmap2.html', times=times_indicators)
 
     #return render_template('index.html', times=dummy_times) 
 
