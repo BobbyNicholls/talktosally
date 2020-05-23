@@ -81,7 +81,7 @@ def root():
     times_indicators = iter(times_indicators)
 
     return render_template(
-        'tableau_map_n_chat_iframe.html', times=times_indicators)
+        'tableau_map_n_chat.html', times=times_indicators)
 
     #return render_template('index.html', times=dummy_times) 
 
